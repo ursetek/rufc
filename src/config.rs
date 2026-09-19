@@ -1,6 +1,4 @@
 //! Configuration loading and validation (DR 008).
-//!
-//! This module depends on no other Rufc modules (DR 001).
 
 use serde::Deserialize;
 use std::collections::HashMap;
