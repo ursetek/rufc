@@ -1,0 +1,28 @@
+[package]
+name = "rufc"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "SSG for numbered document registries."
+authors = ["Ivan Chetchasov <vi.is.chapmann@gmail.com>"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/ursetek/rufc"
+
+[dependencies]
+annotate-snippets = "=0.12.16"
+pulldown-cmark = "=0.13.4"
+toml = "=1.1.6"
+serde = { version = "1.0", features = ["derive"] }
+thiserror = "2.0"
+
+[dev-dependencies]
+
+[lints]
+rust.missing_docs = "deny"
+clippy.all = "warn"
+clippy.pedantic = "warn"
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+strip = true
