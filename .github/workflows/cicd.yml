@@ -106,11 +106,11 @@ jobs:
           git push origin "v${VERSION}"
 
       - name: Install cargo-chlog
-        if: steps.check.outputs.exists == 'false'
+        if: steps.check.outputs.exists == 'false' && false  # TODO: fix cargo-chlog and remove ` && false`
         run: cargo install cargo-chlog
 
       - name: Generate release notes
-        if: steps.check.outputs.exists == 'false'
+        if: steps.check.outputs.exists == 'false' && false  # TODO: fix cargo-chlog and remove ` && false`
         id: notes
         run: |
           PREV_TAG=$(git describe --tags --abbrev=0 HEAD~1 2>/dev/null || echo "")
