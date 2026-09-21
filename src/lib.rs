@@ -3,3 +3,4 @@
 pub mod config;
 pub mod diagnostics;
 pub mod document;
+pub mod registry;
